@@ -4,8 +4,11 @@ DistBFS
 MPI Implementation of Level-Synchronous Breath First Search[1]. 
 
 The algorithm maintains two queues: FS and NS. FS contains vertices that are active in the current superstep, while NS includes vertices that will be active in the next superstep. Since each rank only has a portion of the entire graph, while you are traversing through the neighbours of vertices in FS, you need to check if it is a remote one. 
+
 Case 1 (It is a remote vertex): you need to send a message to its owner telling him to put the vertex in NS if the vertex haven't been visited. (store all these newly visisted remote vertice id in a buffer and sent to their owner in the communication phase) 
+
 Case 2 (It is a local vertex): insert it into NS if necessary.
+
 If fact, in the implementation, each superstep is split into two phases: computation phase (visting neighbours of FS) and communication phase (notify owners of newly visit remote vertices).
 
 
