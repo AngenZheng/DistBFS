@@ -13,6 +13,7 @@ As can be, the way you distribute the graph across MPI Ranks has great impact on
 
 
 References:
+
 [1]. "Parallel breadth-first search on distributed memory systems" by Buluç, Aydin, and Kamesh Madduri. International Conference for High Performance Computing, Networking, Storage and Analysis, 2011
 
 [2]. Metis. http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
