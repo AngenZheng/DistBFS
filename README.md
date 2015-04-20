@@ -14,7 +14,11 @@ As can be, the way you distribute the graph across MPI Ranks has great impact on
 
 References:
 [1]. "Parallel breadth-first search on distributed memory systems" by Buluç, Aydin, and Kamesh Madduri. International Conference for High Performance Computing, Networking, Storage and Analysis, 2011
+
 [2]. Metis. http://glaros.dtc.umn.edu/gkhome/metis/metis/overview
+
 [3]. Zoltan. http://www.cs.sandia.gov/zoltan/.
+
 [4]. "Streaming graph partitioning for large distributed graphs" by Isabelle Stanton, Gabriel Kliot. KDD, 2012.
+
 [5]. "(Re)partitioning for stream-enabled computation" by Erwan Le Merrer, Yizhong Liang, Gilles Trédan. arXiv:1310.8211, 2013.
