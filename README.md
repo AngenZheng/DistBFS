@@ -1,7 +1,7 @@
 DistBFS
 =======
 
-MPI Implementation of Level-Synchronous Breath First Search[1]. 
+This is an optimized MPI implementation of master branch of Level-Synchronous Breath First Search[1]. 
 
 The algorithm maintains two queues: FS and NS. FS contains vertices that are active in the current superstep, while NS includes vertices that will be active in the next superstep. Since each rank only has a portion of the entire graph, while you are traversing through the neighbours of vertices in FS, you need to check if it is a remote one. 
 
@@ -13,6 +13,10 @@ If fact, in the implementation, each superstep is split into two phases: computa
 
 
 As can be seen, the way you distribute the graph across MPI Ranks has great impact on the performance. In the literature, there are two classes of graph partitioning algorithms: edge-cut based and vertex-cut based. The fromer partitions the graph by assigning vertices across partitions, while the latter partitions the graph by assigning edges across partitions. My implementation of BFS requires the graph to be partitioned using edge-cut based algorithms. There are lots of open source edge-cut based graph partitioners, such as Metis[2] and Zoltan[3], we can use. The major issue of these graph partitioners is that the partitioning process may take a very long time to accomplish, especially for large graphs. To overcome this issue, several streaming graph partitioners[4, 5] have been proposed.    
+
+Dependent Libraries:
+	1. MPI
+	2. zoltan
 
 
 References:
