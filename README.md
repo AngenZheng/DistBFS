@@ -1,7 +1,7 @@
 DistBFS
 =======
 
-This is an optimized implementation of master branch of Level-Synchronous Breath First Search[1]. 
+This is an optimized implementation of master branch for Level-Synchronous Breath First Search[1]. 
 
 The algorithm maintains two queues: FS and NS. FS contains vertices that are active in the current superstep, while NS includes vertices that will be active in the next superstep. Since each rank only has a portion of the entire graph, while you are traversing through the neighbours of vertices in FS, you need to check if it is a remote one. 
 
