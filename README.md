@@ -1,6 +1,8 @@
 DistBFS
 =======
 
+Please checkout the devel branch, which is an optimized version of the master branch, if you are interested in the code.
+
 MPI Implementation of Level-Synchronous Breath First Search[1]. 
 
 The algorithm maintains two queues: FS and NS. FS contains vertices that are active in the current superstep, while NS includes vertices that will be active in the next superstep. Since each rank only has a portion of the entire graph, while you are traversing through the neighbours of vertices in FS, you need to check if it is a remote one. 
